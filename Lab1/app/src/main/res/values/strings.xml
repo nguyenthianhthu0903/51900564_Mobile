@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab1_51900564_NguyenThiAnhThu</string>
+    <string name="bai1">Bài 1</string>
+    <string name="bai2">Bài 2</string>
+    <string name="bai5">Bài 3</string>
+    <string name="content_bai1">0</string>
+    <string name="toast">Toast</string>
+    <string name="count">Count</string>
+</resources>
