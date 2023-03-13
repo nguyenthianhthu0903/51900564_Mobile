@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_frag"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.appnote.HomeFragment"
+        android:label="homefragment"
+        tools:layout="@layout/homefragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/trash"
+        android:name="com.example.appnote.TrashFragment"
+        android:label="trashfragment"
+        tools:layout="@layout/trashfragment" />
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.example.appnote.SettingFragment"
+        android:label="settingfragment"
+        tools:layout="@layout/settingfragment" />
+    <fragment
+        android:id="@+id/label"
+        android:name="com.example.appnote.LabelFragment"
+        android:label="labelfragment"
+        tools:layout="@layout/labelfragment" />
+    <fragment
+        android:id="@+id/changepass"
+        android:name="com.example.appnote.Changepass"
+        android:label="Changepass"
+        tools:layout="@layout/changepass" />
+    <!--    <navigation android:id="@+id/navigation" />-->
+
+
+</navigation>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="150dp"
+        android:id="@+id/img"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sendotp"/>
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:text="QUÊN MẬT KHẨU"
+        android:textSize="30sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingRight="50dp"
+        android:id="@+id/mess"
+        android:paddingLeft="50dp"
+        android:layout_height="wrap_content"
+        android:text="Mã OTP sẽ được gửi đến email người dùng và có hiệu lực trong 3 phút"
+        android:gravity="center"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/inputEmailToSendOTP"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/mess"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="Nhập địa chỉ email"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#8F8181"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSendOTP"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputEmailToSendOTP"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="GỬI" />
+
+
+</RelativeLayout>
