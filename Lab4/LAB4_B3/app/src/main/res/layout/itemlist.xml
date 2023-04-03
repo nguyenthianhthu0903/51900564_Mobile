@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutItem"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:weightSum="6"
+    android:layout_marginTop="10dp"
+    android:layout_height="40dp">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_phone"/>
+    <TextView
+        android:id="@+id/phoneName"
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Name phone"/>
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
