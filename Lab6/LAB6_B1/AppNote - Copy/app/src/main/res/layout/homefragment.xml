@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:context=".Activity"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--THANH HEADER-->
+        <LinearLayout
+            android:id="@+id/layoutSearch"
+            android:orientation="horizontal"
+            android:elevation="16dp"
+            android:weightSum="7"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+            <ImageView
+                android:id="@+id/imgMenu"
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_sort"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:background="@drawable/formsearch">
+                <ImageView
+                    android:id="@+id/filtersort"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_search_24"/>
+                <EditText
+                    android:textColorHint="@color/black"
+                    android:id="@+id/inputSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:imeOptions="actionDone"
+                    android:hint="Tìm kiếm"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/changeView"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_changeview"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!--NOTE-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/noteRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutSearch"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <!--FOOTER-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/footer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:background="#FBEEDF"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:paddingRight="10dp">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iconAddImg"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:src="@drawable/ic_img" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/addNote"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:src="@drawable/ic_add" />-->
+<!--        </LinearLayout>-->
+        <!--Button add note outline-->
+        <ImageView
+            android:id="@+id/addNoteMain"
+            android:layout_width="60dp"
+            android:layout_height="60sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_add_not_back"
+            android:src="@drawable/ic_addbackground" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

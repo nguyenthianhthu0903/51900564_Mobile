@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/screenCreateNote"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".CreateNote">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iconBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_back" />
+
+            <ImageView
+                android:id="@+id/deleteNote"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/chooseTime"
+                android:src="@drawable/ic_delete" />
+
+            <ImageView
+                android:id="@+id/pinNote"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/saveNote"
+                android:src="@drawable/ic_notpin" />
+
+
+            <ImageView
+                android:id="@+id/saveNote"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/done_bankground"
+                android:src="@drawable/ic_done" />
+
+            <ImageView
+                android:id="@+id/chooseDate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/pinNote"
+                android:src="@drawable/calendar" />
+
+            <ImageView
+                android:id="@+id/chooseTime"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/chooseDate"
+                android:src="@drawable/ic_baseline_access_time_24" />
+
+            <EditText
+                android:id="@+id/noteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="50dp"
+                android:background="@android:color/transparent"
+                android:hint="Tiêu đề"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/dateNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noteTitle"
+                android:layout_marginTop="5dp"
+                android:hint="Ngày tháng năm"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:textColor="#4A3E3E"
+                android:textSize="20dp" />
+
+
+            <LinearLayout
+                android:id="@+id/subGroup"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/dateNote"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/colorLeftSubtitle"
+                    android:layout_width="8dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ssub_background" />
+
+                <EditText
+                    android:id="@+id/subNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Phụ đề"
+                    android:textColor="#2E0B0B"
+                    android:textSize="22dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/timeAndDateAlarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subGroup"
+                android:layout_marginTop="5dp"
+                android:hint="Hẹn nhắc nhở"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:textColor="#4A3E3E"
+                android:textSize="20dp" />
+
+
+            <EditText
+                android:id="@+id/inputNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeAndDateAlarm"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="Nội dung ghi chú"
+                android:importantForAutofill="no"
+                android:includeFontPadding="true"
+                android:inputType="textImeMultiLine"
+                android:minHeight="100dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/labelContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputNote"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/labelbackground"
+                android:padding="5dp"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/pictureInNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labelContent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:adjustViewBounds="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <SeekBar
+                android:id="@+id/seekbar1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/pictureInNote" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seekbar1"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:text="00:00 / 00:00"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/buttonPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_centerInParent="true"
+                android:text="PLAY" />
+
+            <VideoView
+                android:id="@+id/videoInNote"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@+id/buttonPlay"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#E3EDD1"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <ImageView
+            android:id="@+id/addAlarm"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/notalarm" />
+        <ImageView
+            android:id="@+id/iconAddImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_img" />
+        <ImageView
+            android:id="@+id/iconAddVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_addvideo" />
+        <ImageView
+            android:id="@+id/iconChooseColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_color" />
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iconChooseLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_label" />
+        <ImageView
+            android:id="@+id/iconSound"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sound" />
+        <ImageView
+            android:id="@+id/iconLock"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lock" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

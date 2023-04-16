@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:hint="Nội dung ở đây"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/writeIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:onClick="writeIn"
+        android:text="GHI Internal" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/writeIn"
+        android:layout_below="@+id/view"
+        android:layout_marginLeft="50dp"
+        android:onClick="writeEx"
+        android:text="GHI EXTERNAL" />
+
+    <Button
+        android:id="@+id/readIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/writeIn"
+        android:onClick="readIn"
+        android:text="Đọc Internal" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/readIn"
+        android:layout_below="@+id/writeIn"
+        android:layout_marginLeft="50dp"
+        android:onClick="readEx"
+        android:text="ĐỌC EXTERNAL" />
+
+
+
+</RelativeLayout>

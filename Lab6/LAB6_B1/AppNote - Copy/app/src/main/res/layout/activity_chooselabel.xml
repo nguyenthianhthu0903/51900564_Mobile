@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back" />
+
+        <EditText
+            android:id="@+id/inputLabel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/icBack"
+            android:background="@android:color/transparent"
+            android:hint="Tạo nhãn mới"
+            android:textSize="20sp" />
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/iconDoneLabel"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listViewLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
